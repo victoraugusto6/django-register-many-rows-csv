@@ -1,0 +1,12 @@
+django
+gunicorn
+python-decouple
+dj-database-url
+psycopg2-binary
+django-s3-folder-storage
+collectfast
+django-debug-toolbar
+sentry-sdk
+django-ordered-model
+ipython
+django-extensions
