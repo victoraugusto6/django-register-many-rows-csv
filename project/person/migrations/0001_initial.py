@@ -12,11 +12,10 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='File',
+            name='Person',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('file', models.FileField(upload_to='')),
-                ('method', models.CharField(choices=[('create', 'Create'), ('bulk', 'Bulk_Create')], max_length=6)),
+                ('nome', models.CharField(max_length=100)),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('uploaded_at', models.DateTimeField(auto_now=True)),
             ],

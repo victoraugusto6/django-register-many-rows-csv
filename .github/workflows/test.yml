@@ -38,3 +38,6 @@ jobs:
       - name: Rodar Testes Automáticos
         run: |
           pytest --cov=project
+      - name: Rodar Testes Automáticos
+        run: |
+          pytest --cov=project
