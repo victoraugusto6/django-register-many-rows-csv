@@ -17,15 +17,13 @@
 </head>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#bs-example-navbar-collapse-1">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="{% url 'base:home' %}">Home</a>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="navbar-nav">
-        </ul>
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'base:home' %}">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
     </div>
 </nav>
 
@@ -39,7 +37,7 @@
                     Hello, world!
                 </h2>
                 <p>
-                    Cadastre linhas de um CSV no Django Admin utilizando Celery.
+                    Cadastre linhas de um CSV no Django Admin utilizando o método <code>create()</code> ou <code>bulk_create()</code>.
                 </p>
                 <p>
                     <a class="btn btn-primary btn-large" href="{% url 'admin:index' %}">Django Admin</a>
