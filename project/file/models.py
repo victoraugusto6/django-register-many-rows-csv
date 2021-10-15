@@ -45,10 +45,10 @@ def import_data_bulk(pk):
     data = csv.DictReader(content)
     list_data = list(data)
 
-    objs = [
+    objs = (
         Person(nome=row['name'])
         for row in list_data
-    ]
+    )
 
     Person.objects.bulk_create(objs)
 
