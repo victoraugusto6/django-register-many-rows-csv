@@ -21,11 +21,11 @@ def import_data_create(pk):
     io_string = io.StringIO(content)
     next(io_string)
 
-    for column in csv.reader(io_string, delimiter=',', quotechar='"'):
+    for count, column in enumerate(csv.reader(io_string, delimiter=',', quotechar='"')):
         _, created = Person.objects.update_or_create(
             nome=column[0],
         )
-        logger.debug(f'Import {column[0]}')
+        logger.debug(f'{count} - Import {column[0]}')
 
     end = time()
     time_delta = end - initial
